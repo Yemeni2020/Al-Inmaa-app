@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50.5" height="50.5" viewBox="0 0 50.5 50.5">
+  <g id="user-octagon" transform="translate(1.25 1.25)">
+    <g id="user-octagon-2" data-name="user-octagon">
+      <path id="Vector" d="M36.34,26.84A6.348,6.348,0,0,1,33.2,32.3L21.32,39.16a6.326,6.326,0,0,1-6.3,0L3.14,32.3A6.3,6.3,0,0,1,0,26.84V13.16A6.348,6.348,0,0,1,3.14,7.7L15.02.84a6.326,6.326,0,0,1,6.3,0L33.2,7.7a6.323,6.323,0,0,1,3.14,5.46Z" transform="translate(5.82 4)" fill="none" stroke="#1d4487" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" stroke-dasharray="0 0"/>
+      <g id="Group" transform="translate(16 12.68)">
+        <path id="Vector-2" data-name="Vector" d="M4.66,9.32A4.66,4.66,0,1,1,9.32,4.66,4.66,4.66,0,0,1,4.66,9.32Z" transform="translate(3.34)" fill="none" stroke="#1d4487" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" stroke-dasharray="0 0"/>
+        <path id="Vector-3" data-name="Vector" d="M16,6.52C16,2.92,12.42,0,8,0S0,2.92,0,6.52" transform="translate(0 14.12)" fill="none" stroke="#1d4487" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" stroke-dasharray="0 0"/>
+      </g>
+      <path id="Vector-4" data-name="Vector" d="M48,0V48H0V0Z" fill="none" stroke="#1d4487" stroke-width="2.5" opacity="0"/>
+    </g>
+  </g>
+</svg>

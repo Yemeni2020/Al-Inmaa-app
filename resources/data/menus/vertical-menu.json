@@ -1,0 +1,119 @@
+{
+  "menu": [
+    {
+      "url": "#",
+      "name": "Dashboard",
+      "slug": "dashboard",
+      "icon": "desktop",
+      "tag": "2",
+      "tagcustom": "badge badge-light-danger badge-pill badge-round float-right mr-50",
+      "submenu": [
+        {
+          "url": "/admin/dashboard",
+          "name": "Dashboard",
+          "slug": "Dashboard",
+          "icon": "bx bx-right-arrow-alt"
+        }
+
+      ]
+    },
+    {
+      "navheader": "Apps"
+    },
+
+     {
+      "url": "#",
+      "name": "User",
+      "slug": "user",
+      "icon": "users",
+      "tagcustom": "badge badge-light-danger badge-pill badge-round float-right mr-50",
+      "submenu": [
+        {
+          "url": "admin/users/list",
+          "name": "All Users",
+          "slug": "admin.users.app-users-list",
+          "icon": "bx bx-right-arrow-alt"
+        }
+      ]
+    },
+    {
+      "navheader": "Apps"
+    },
+
+     {
+      "url": "#",
+      "name": "Products",
+      "slug": "products",
+      "icon": "morph-folder",
+      "submenu": [
+        {
+          "url": "app/posts/list",
+          "name": "All Products",
+          "slug": "admin.posts.app-posts-list",
+          "icon": "bx bx-right-arrow-alt"
+        },
+        {
+          "url": "app/posts/create",
+          "name": "Create",
+          "slug": "app-posts-create",
+          "icon": "bx bx-right-arrow-alt"
+        }
+      ]
+    },
+     {
+      "url": "#",
+      "name": "Services",
+      "slug": "services",
+      "icon": "paper-plane",
+      "submenu": [
+        {
+          "url": "admin/services",
+          "name": "All Services",
+          "slug": "admin.services.index",
+          "icon": "bx bx-right-arrow-alt"
+        }
+      ]
+    },
+     {
+      "url": "#",
+      "name": "Roles",
+      "slug": "Roles",
+      "icon": "notebook",
+      "submenu": [
+        {
+          "url": "admin/roles",
+          "name": "Roles",
+          "slug": "admin.roles.index",
+          "icon": "bx bx-right-arrow-alt"
+        }
+      ]
+    },
+    {
+      "navheader": "extra"
+    },
+    {
+        "url": "app/about_us",
+        "name": "About Us",
+        "slug": "extra-about-us",
+        "icon": "heart"
+      },
+
+     {
+      "url": "#",
+      "name": "Banner",
+      "slug": "banner",
+      "icon": "morph-folder",
+      "submenu": [
+
+        {
+            "url": "app/banner/list",
+            "name": "List",
+            "slug": "extra-banner-create",
+            "icon": "bx bx-right-arrow-alt"
+          }
+      ]
+    }
+
+
+  ]
+}
