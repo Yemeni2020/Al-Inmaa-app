@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('pages.dashboards') }}">
                         <img class="logo h-12 w-auto" src="{{ asset('images/ico/cropped_image.png') }}" width="100%"
                             height="100%" alt="">
                     </a>
@@ -230,12 +230,12 @@
             <!-- Responsive Settings Options -->
             <div class="pt-4 pb-1 border-t border-gray-200">
                 <div class="flex items-center px-4">
-                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                    {{-- @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                         <div class="shrink-0 me-3">
                             <img class="h-10 w-10 rounded-full object-cover"
                                 src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                         </div>
-                    @endif
+                    @endif --}}
 
                     <div>
                         <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
