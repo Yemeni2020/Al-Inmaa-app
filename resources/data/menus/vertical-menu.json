@@ -1,21 +1,10 @@
 {
   "menu": [
     {
-      "url": "#",
+      "url": "/admin/dashboard",
       "name": "Dashboard",
       "slug": "dashboard",
-      "icon": "desktop",
-      "tag": "2",
-      "tagcustom": "badge badge-light-danger badge-pill badge-round float-right mr-50",
-      "submenu": [
-        {
-          "url": "/admin/dashboard",
-          "name": "Dashboard",
-          "slug": "Dashboard",
-          "icon": "bx bx-right-arrow-alt"
-        }
-
-      ]
+      "icon": "desktop"
     },
     {
       "navheader": "Apps"
