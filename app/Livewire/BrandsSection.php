@@ -22,6 +22,7 @@ class BrandsSection extends Component
     }
     public function render()
     {
-        return view('livewire.brands-section');
+        return view('livewire.brands-section')
+        ->layout('layouts.app');;
     }
 }

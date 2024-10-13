@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\BranchController;
 use App\Http\Middleware\RoleMiddleWare;
 
 
@@ -33,7 +34,7 @@ Route::middleware(['auth'] )->group(function () {
     Route::delete('/services/{service}', [ServiceController::class, 'destroy'])->name('admin.services.destroy');
 });
 Route::middleware(['auth'] )->group(function () {
-    Route::get('/roles', [RoleController::class, 'index'])->name('admin.roles.index');
+Route::get('/roles', [RoleController::class, 'index'])->name('admin.roles.index');
     Route::get('/roles/create', [RoleController::class, 'create'])->name('admin.roles.create');
     Route::post('/roles', [RoleController::class, 'store'])->name('admin.roles.store');
     Route::get('/roles/{role}/edit', [RoleController::class, 'edit'])->name('admin.roles.edit');
@@ -42,4 +43,23 @@ Route::middleware(['auth'] )->group(function () {
     Route::put('/role/{role}/attach', [RoleController::class,'attach'])->name('user.premission.attach');
     Route::put('/role/{role}/detach', [RoleController::class,'detach'])->name('user.premission.detach');
     // Route::put('admin/users/{user}/detach', [UserController::class,'detach'])->name('user.role.detach');
+});
+Route::middleware(['auth'] )->group(function () {
+ // List all branches
+ Route::get('/branches', [BranchController::class, 'index'])->name('admin.branches.index');
+
+ // Display form to create a new branch
+ Route::get('/branches/create', [BranchController::class, 'create'])->name('admin.branches.create');
+
+ // Store a new branch
+ Route::post('/branches', [BranchController::class, 'store'])->name('branches.store');
+
+ // Display form to edit a branch
+ Route::get('/branches/{branch}/edit', [BranchController::class, 'edit'])->name('admin.branches.edit');
+
+ // Update a branch
+ Route::put('/branches/{branch}', [BranchController::class, 'update'])->name('branches.update');
+
+ // Delete a branch
+ Route::delete('/branches/{branch}', [BranchController::class, 'destroy'])->name('branches.destroy');
 });

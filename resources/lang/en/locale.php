@@ -242,6 +242,31 @@ return [
     "All Products"=> "All Products",
     "Create a Product"=> "Create a Product",
     "Submit"=> "Submit",
+    /////////////////////contactus
+    "Website Analytics"=>"Website Analytics",
+    "Enter email address"=>"Enter email address",
+    "Remove"=>"Remove",
+    "Manage Branch Information"=>"Manage Branch Information",
+    "Branch Name"=>"Branch Name",
+    "Enter branch name"=>"Enter branch name",
+    "Branch Address"=> "Branch Address",
+    "Enter branch address"=>"Enter branch address",
+    "Phone Numbers"=>"Phone Numbers",
+    "Enter phone number"=>"Enter phone number",
+    "Add Phone"=>"Add Phone",
+    "Email Addresses"=>"Email Addresses",
+    "Add Email"=>"Add Email",
+    "Save Branch"=>"Save Branch",
+    "Feel free to reach out to any of our branches."=>"Feel free to reach out to any of our branches.",
+    "Branches Overview"=>"Branches Overview",
+    "Address"=>"Address",
+    "Update Branch"=>"Update Branch",
+    "Edit Branch Information"=>"Edit Branch Information",
+    "Add New Branch"=>"Add New Branch",
+    "contact us"=>"Contact us",
+    "Company info"=>"Company info",
+
+
 
 
 

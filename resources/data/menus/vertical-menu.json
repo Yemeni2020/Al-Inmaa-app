@@ -81,11 +81,26 @@
       "navheader": "extra"
     },
     {
-        "url": "app/about_us",
-        "name": "About Us",
-        "slug": "extra-about-us",
-        "icon": "heart"
+        "url": "#",
+        "name": "Company info",
+        "slug": "Company info",
+        "icon": "notebook",
+        "submenu": [
+          {
+            "url": "admin/branches",
+            "name": "contact us",
+            "slug": "admin.branches.index",
+            "icon": "bx bx-right-arrow-alt"
+          },
+          {
+            "url": "app/about_us",
+            "name": "About Us",
+            "slug": "extra-about-us",
+            "icon": "heart"
+          }
+        ]
       },
+
 
      {
       "url": "#",

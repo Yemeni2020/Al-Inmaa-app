@@ -205,9 +205,6 @@
             <x-responsive-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
                 {{ __('locale.Our Services') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('pages.guest-home-page') }}" :active="request()->routeIs('pages.guest-home-page')">
-                {{ __('locale.Contact Us') }}
-            </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
                 {{ __('locale.About Us') }}
             </x-responsive-nav-link>

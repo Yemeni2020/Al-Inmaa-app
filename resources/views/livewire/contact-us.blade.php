@@ -1,32 +1,44 @@
 <div>
+
+
     <div class="container mx-auto py-12">
-        <h1 class="text-4xl font-bold mb-6 text-gray-800">{{__('locale.Contact Us')}}</h1>
-
-        <!-- Company Info -->
-        <div class="bg-white shadow-md rounded-lg p-6 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">{{__('locale.Our Main Location')}}</h2>
-            <p class="text-gray-700 mb-4"> الأمير عبدالمجيد، الشراع، جدة 23816، المملكة العربية السعودية</p>
-            <p class="text-gray-700 mb-4">{{__('locale.Phone')}}: {{__('locale.num1')}}</p>
-            <p class="text-gray-700">{{__('locale.Email')}}: contact@company.com</p>
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-gray-800">{{__('locale.Contact Us')}}</h2>
+            <p class="lead text-muted">{{__('locale.Feel free to reach out to any of our branches.')}}</p>
         </div>
 
-        <!-- Other Addresses Section -->
-        <div class="bg-white shadow-md rounded-lg p-6 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">{{__('locale.Other Addresses')}}</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800">{{__('locale.Branch 2')}}</h3>
-                    <p class="text-gray-700 mb-4">شارع الحزم، حي النور، جدة 23815، المملكة العربية السعودية</p>
-                    <p class="text-gray-700">{{__('locale.Phone')}}: {{__('locale.num2')}}</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800">{{__('locale.Branch 3')}}</h3>
-                    <p class="text-gray-700 mb-4">طريق الملك سعود، جدة 23827، المملكة العربية السعودية</p>
-                    <p class="text-gray-700">{{__('locale.Phone')}}: {{__('locale.num3')}}</p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @foreach($branches as $branch)
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">{{ $branch->name }}</h3>
+                <p class="text-gray-600 mb-4">
+                    <i class="fas fa-map-marker-alt text-indigo-500"></i>
+                    {{ $branch->address }}
+                </p>
+
+                <!-- Phone Numbers -->
+                <h5 class="text-lg font-semibold text-gray-700 mb-2">{{__('locale.Phone Numbers')}}</h5>
+                <ul class="list-disc list-inside text-gray-600">
+                    @foreach($branch->phones as $phone)
+                    <li>
+                        <i class="fas fa-phone-alt text-indigo-500"></i>
+                        {{ $phone->phone_number }}
+                    </li>
+                    @endforeach
+                </ul>
+
+                <!-- Email Addresses -->
+                <h5 class="text-lg font-semibold text-gray-700 mt-4 mb-2">{{__('locale.Email Addresses')}}</h5>
+                <ul class="list-disc list-inside text-gray-600">
+                    @foreach($branch->emails as $email)
+                    <li>
+                        <i class="fas fa-envelope text-indigo-500"></i>
+                        {{ $email->email_address }}
+                    </li>
+                    @endforeach
+                </ul>
             </div>
+            @endforeach
         </div>
-
-
     </div>
 </div>
