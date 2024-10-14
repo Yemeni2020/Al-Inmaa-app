@@ -5,6 +5,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
 use App\Http\Middleware\RoleMiddleWare;
+use App\Http\Controllers\SitemapController;
 // Auth::routes();
 // Route::middleware([
 //     'auth:sanctum',
@@ -15,6 +16,7 @@ use App\Http\Middleware\RoleMiddleWare;
 //         return view('dashboard');
 //     })->name('dashboard');
 // });
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
 Route::middleware(['auth'])->group(function(){
 });
 Route::get('lang/{locale}', [LanguageController::class, 'swap'])->name('lang-locale');

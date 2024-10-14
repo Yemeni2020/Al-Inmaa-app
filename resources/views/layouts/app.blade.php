@@ -17,9 +17,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('description', 'Default description for SEO')">
-    <meta name="keywords" content="@yield('keywords', 'company, services')">
+    <meta name="keywords" content="@yield('keywords', 'شركة الانماء المتطورة, شركة,الانماء,تجارية,حديثة,شركة الانماء التجارية, شركة الانماء المتطورة للتجارة')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="google-site-verification" content="FdPiNqqVOq79nQdn3a3qkZRR1qR5-vHGGICykkQnwcg" />
     <title>{{ config('app.name', 'Company Website') }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">

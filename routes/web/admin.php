@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\BrandController;
 use App\Http\Middleware\RoleMiddleWare;
 
 
@@ -62,4 +63,23 @@ Route::middleware(['auth'] )->group(function () {
 
  // Delete a branch
  Route::delete('/branches/{branch}', [BranchController::class, 'destroy'])->name('branches.destroy');
+});
+Route::middleware(['auth'] )->group(function () {
+ // List all brands
+ Route::get('/brands', [BrandController::class, 'index'])->name('admin.brands.index');
+
+ // Display form to create a new brand
+ Route::get('/brands/create', [BrandController::class, 'create'])->name('admin.brands.create');
+
+ // Store a new brand
+ Route::post('/brands', [BrandController::class, 'store'])->name('brands.store');
+
+ // Display form to edit a brand
+ Route::get('/brands/{brand}/edit', [BrandController::class, 'edit'])->name('admin.brands.edit');
+
+ // Update a brand
+ Route::put('/brands/{brand}', [BrandController::class, 'update'])->name('brands.update');
+
+ // Delete a brand
+ Route::delete('/brands/{brand}', [BrandController::class, 'destroy'])->name('brands.destroy');
 });

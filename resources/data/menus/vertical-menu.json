@@ -100,6 +100,12 @@
           }
         ]
       },
+      {
+        "url": "/admin/brands",
+        "name": "Brands",
+        "slug": "brands",
+        "icon": "desktop"
+      },
 
 
      {

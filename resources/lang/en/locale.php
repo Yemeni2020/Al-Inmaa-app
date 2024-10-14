@@ -265,6 +265,18 @@ return [
     "Add New Branch"=>"Add New Branch",
     "contact us"=>"Contact us",
     "Company info"=>"Company info",
+    "Brands"=>"Brands",
+    ////
+    "Privacy Policy"=>"Privacy Policy",
+    "Privacy 1"=> "We take your privacy seriously. This Privacy Policy outlines how we collect, use, and protect your personal information.",
+    "Privacy head1" =>"1. Information Collection",
+    "Privacy body1" => "We collect personal information such as your name, email address, and other details when you register on our site or subscribe to our newsletter.",
+    "Privacy head2"=> "2. Use of Information",
+    "Privacy body2"=> "Provide, operate, and maintain our website",
+    "Privacy body2.1"=> "Improve user experience",
+    "Privacy body2.2"=> "Send periodic emails (only if you've opted in)",
+    "Privacy head3"=> "3. Data Security",
+    "Privacy body3"=> "We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal data.",
 
 
 
