@@ -24,6 +24,6 @@ class AdminAboutUsController extends Controller
 
         AboutUs::updateOrCreate([], ['title'=>$request->title, 'description' => $request->description]);
 
-        return redirect()->route('admin.extra-about-us')->with('success', 'About Us content updated successfully!');
+        return redirect()->route('admin.extra-about-us')->with('success', 'تم تحديث محتوى "حولنا" بنجاح!');
     }
 }

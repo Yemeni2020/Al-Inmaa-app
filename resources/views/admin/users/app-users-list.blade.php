@@ -13,6 +13,15 @@
 @endsection
 
 @section('content')
+
+@if (session('message'))
+    <div class="alert alert-danger">{{ session('message') }}</div>
+@elseif(session('post-created-message'))
+    <div class="alert alert-success">{{ session('post-created-message') }}</div>
+@elseif(session('post-updated-message'))
+    <div class="alert alert-success">{{ session('post-updated-message') }}</div>
+@endif
+
 <div align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
     <h1>{{__('locale.Manage Users')}}</h1>
     <a href="{{ route('register') }}" class="btn btn-primary">{{__('locale.Create User')}}</a>
@@ -59,7 +68,7 @@
                                                 alter="{{__("locale.Edit")}}"><i class="bx bx-edit-alt"></i></a></td>
                                         <td>
                                             {{-- <form method="post" action="{{route('user.destroy', $user->id)}}"> --}}
-                                                <form method="post" action="#">
+                                                <form method="post" action="{{route('admin.destroy', $user->id)}}">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger">{{__('locale.Delete')}}</button>

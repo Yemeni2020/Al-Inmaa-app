@@ -41,7 +41,7 @@ class BranchController extends Controller
         Email::create(['branch_id' => $branch->id, 'email_address' => $email]);
     }
 
-    return redirect()->route('admin.branches.index');
+    return redirect()->route('admin.branches.index')->with('success','تم اضافة الفرع بنجاح');
 }
 
     public function edit(Branch $branch){
@@ -61,11 +61,11 @@ class BranchController extends Controller
         foreach ($request->emails as $email) {
             Email::create(['branch_id'=>$branch->id, 'email_address'=>$email]);
         }
-        return redirect()->route('admin.branches.index');
+        return redirect()->route('admin.branches.index')->with('success-update','تم تحديث الفرع بنجاح');
     }
 
     public function destroy(Branch $branch)  {
         $branch->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success-delete','تم حذف الفرع بنجاح');;
     }
 }

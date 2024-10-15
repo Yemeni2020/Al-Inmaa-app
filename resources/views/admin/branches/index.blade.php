@@ -4,7 +4,14 @@
 
 @section('content')
 <div class="container mt-5" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
-    <div class="row justify-content-center">
+@if (session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+@elseif(session('success-update'))
+    <div class="alert alert-success">{{ session('success-update') }}</div>
+@elseif(session('success-delete'))
+    <div class="alert alert-success">{{ session('success-delete') }}</div>
+@endif    
+<div class="row justify-content-center">
         <div class="col-lg-12 col-md-12 col-12">
             <div class="card shadow-lg p-4 rounded-3 border-0">
                 <h2 class="text-center mb-4 text-primary">{{__('locale.Branches Overview')}}</h2>

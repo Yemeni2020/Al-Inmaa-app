@@ -54,22 +54,7 @@ class UserController extends Controller
 
         return back();
     }
-    // public function create(array $input ,Request $request):
-    // {
-    //     $request->validate($input, [
-    //         'name' => ['required', 'string', 'max:255'],
-    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-    //         'password' => $this->passwordRules(),
-    //         'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
-    //     ]);
-
-    //     User::create([
-    //         'name' => $input['name'],
-    //         'email' => $input['email'],
-    //         'password' => Hash::make($input['password']),
-    //     ]);
-    //     return redirect()->route('admin.users.list')->with('success', 'Service created successfully.');
-    // }
+    
     public function attach(User $user, Role $roles){
         $user->roles()->attach(request('role'));
 
@@ -90,8 +75,8 @@ class UserController extends Controller
     {
         $user->delete();
 
-        session()->flash('user-deleted', 'User has been deleted');
+        // session()->flash('user-deleted', 'User has been deleted');
 
-        return back();
+        return back()->with('user-deleted', 'تم حذف المستخدم');
     }
 }

@@ -14,8 +14,8 @@ return [
     'templateTitle' => 'AL-INMAA', //template Title can be changed, default(Frest)
     'isCustomizer' => true, //If True customizer available or false its not available
     'isCardShadow' => true, // Option: true(default) and false ( remove card shadow)
-    'isScrollTop' => true, // Option: true and false (Hide Scroll To Top)
+    'isScrollTop' => false, // Option: true and false (Hide Scroll To Top)
     'defaultLanguage' => 'ar', //set your default language Options: en(default),pt,fr,de
-    'direction' => env('MIX_CONTENT_DIRECTION', 'ltr'), // Page direction
+    'direction' => env('MIX_CONTENT_DIRECTION', 'rtl'), // Page direction
   ]
 ];

@@ -21,6 +21,7 @@ Route::middleware([
     Route::get('users/{user}/profile', [UserController::class,'show'])->name('admin.users.app-user-profile');
     Route::put('admin/users/{user}/attach', [UserController::class,'attach'])->name('user.role.attach');
     Route::put('admin/users/{user}/detach', [UserController::class,'detach'])->name('user.role.detach');
+    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('admin.destroy');
     Route::get('/dashboard', [HomeController::class, 'index'])->name('pages.dashboards');
 
 });

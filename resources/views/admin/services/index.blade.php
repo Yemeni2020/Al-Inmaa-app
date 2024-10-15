@@ -5,6 +5,15 @@
 
 @section('content')
 <div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
+
+@if (session('message'))
+    <div class="alert alert-danger">{{ session('message') }}</div>
+@elseif(session('post-created-message'))
+    <div class="alert alert-success">{{ session('post-created-message') }}</div>
+@elseif(session('post-updated-message'))
+    <div class="alert alert-success">{{ session('post-updated-message') }}</div>
+@endif
+
     <h1>{{__('locale.Manage Services')}}</h1>
     <a href="{{ route('admin.services.create') }}" class="btn btn-primary">{{__('locale.Create Service')}}</a>
     <table class="table">

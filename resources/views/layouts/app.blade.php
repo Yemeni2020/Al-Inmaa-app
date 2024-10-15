@@ -19,8 +19,9 @@
     <meta name="description" content="@yield('description', 'Default description for SEO')">
     <meta name="keywords" content="@yield('keywords', 'شركة الانماء المتطورة, شركة,الانماء,تجارية,حديثة,شركة الانماء التجارية, شركة الانماء المتطورة للتجارة')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <meta name="google-site-verification" content="FdPiNqqVOq79nQdn3a3qkZRR1qR5-vHGGICykkQnwcg" />
-    <title>{{ config('app.name', 'Company Website') }}</title>
+    <title>{{ config('app.name', 'شركة الانماء المتطورة للتجارة') }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -34,6 +35,7 @@
 
     <!-- Styles -->
     @livewireStyles
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lemc2IqAAAAAFHHtN_p9asabPYMfGtxQQR0iu2A"></script>
 </head>
 
 <body>
@@ -78,5 +80,6 @@
 
 
 </body>
+
 
 </html>
