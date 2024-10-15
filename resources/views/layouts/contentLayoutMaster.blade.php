@@ -10,7 +10,7 @@
 @endphp
 
 <html class="loading" lang="@if(session()->has('locale')){{session()->get('locale')}}@else{{$configData['defaultLanguage']}}@endif"
-   data-asset-path="{{ asset('/')}}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" data-textdirection="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
+   data-asset-path="{{ asset('/')}}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}"  >
   <!-- BEGIN: Head-->
 
     <head>

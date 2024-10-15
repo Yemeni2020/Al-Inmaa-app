@@ -3,7 +3,7 @@
 @section('title', 'Brands')
 
 @section('content')
-<div class="container">
+<div class="container" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>Brands</h1>
     <a href="{{ route('admin.brands.create') }}" class="btn btn-primary">Add Brand</a>
     <table class="table">

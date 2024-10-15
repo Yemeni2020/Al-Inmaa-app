@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>Add Brand</h1>
     <form action="{{ route('brands.store') }}" method="POST" enctype="multipart/form-data">
         @csrf

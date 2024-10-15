@@ -2,6 +2,7 @@
 {{-- title --}}
 @section('title', 'Create Service')
 @section('content')
+<div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>{{__('locale.Edit Service')}}</h1>
 
     <form action="{{ route('admin.services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
@@ -29,4 +30,5 @@
 
         <button type="submit" class="btn btn-primary">{{__('locale.Update Service')}}</button>
     </form>
+</div>
 @endsection

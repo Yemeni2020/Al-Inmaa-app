@@ -8,7 +8,7 @@
             <p>{{ $description }}</p>
 
             @if ($image)
-                <img src="{{ Storage::url($image) }}" alt="About Us Image" class="about-image">
+            <img src="{{ Storage::url($image) }}" alt="About Us Image" class="about-image">
             @endif
         </div>
     </div> --}}
@@ -36,7 +36,9 @@
                 </div>
                 <div class="col-lg-5 aos-init aos-animate" data-aos="fade-right" data-aos-delay="500">
                     <div class="first-img-box">
-                        <img src="{{ asset('images/slider/01.jpg') }}" alt="">
+                        @if ($image)
+                            <img src="{{ Storage::url($image) }}" alt="">
+                        @endif
                     </div>
                 </div>
             </div>

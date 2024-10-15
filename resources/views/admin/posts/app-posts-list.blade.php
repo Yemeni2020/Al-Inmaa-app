@@ -17,7 +17,7 @@
 
 @section('content')
     <!-- Zero configuration table -->
-    <section id="basic-datatable">
+    <section id="basic-datatable" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
         <div class="row">
             <div class="col-12">
                 <div class="card">

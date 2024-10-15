@@ -4,7 +4,7 @@
 @section('title', 'Roles')
 
 @section('content')
-    <div class="container">
+    <div class="container" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
         <h1>Edit Role</h1>
 
         <form action="{{ route('admin.roles.update', $role->id) }}" method="POST">

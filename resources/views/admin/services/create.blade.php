@@ -3,6 +3,7 @@
 @section('title', 'Create Services')
 
 @section('content')
+<div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>{{__('locale.Create Service')}}</h1>
     <form action="{{ route('admin.services.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -20,4 +21,5 @@
         </div>
         <button type="submit" class="btn btn-primary">{{__('locale.Create')}}</button>
     </form>
+</div>
 @endsection

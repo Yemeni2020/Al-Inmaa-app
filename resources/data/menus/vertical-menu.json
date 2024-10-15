@@ -6,11 +6,8 @@
       "slug": "dashboard",
       "icon": "desktop"
     },
+    
     {
-      "navheader": "Apps"
-    },
-
-     {
       "url": "#",
       "name": "User",
       "slug": "user",
@@ -25,11 +22,8 @@
         }
       ]
     },
+    
     {
-      "navheader": "Apps"
-    },
-
-     {
       "url": "#",
       "name": "Products",
       "slug": "products",
@@ -49,7 +43,7 @@
         }
       ]
     },
-     {
+    {
       "url": "#",
       "name": "Services",
       "slug": "services",
@@ -63,7 +57,7 @@
         }
       ]
     },
-     {
+    {
       "url": "#",
       "name": "Roles",
       "slug": "Roles",
@@ -77,53 +71,32 @@
         }
       ]
     },
+    
     {
-      "navheader": "extra"
+      "url": "#",
+      "name": "Company info",
+      "slug": "Company info",
+      "icon": "notebook",
+      "submenu": [
+        {
+          "url": "admin/branches",
+          "name": "contact us",
+          "slug": "admin.branches.index",
+          "icon": "bx bx-right-arrow-alt"
+        },
+        {
+          "url": "app/about_us",
+          "name": "About Us",
+          "slug": "extra-about-us",
+          "icon": "heart"
+        }
+      ]
     },
     {
-        "url": "#",
-        "name": "Company info",
-        "slug": "Company info",
-        "icon": "notebook",
-        "submenu": [
-          {
-            "url": "admin/branches",
-            "name": "contact us",
-            "slug": "admin.branches.index",
-            "icon": "bx bx-right-arrow-alt"
-          },
-          {
-            "url": "app/about_us",
-            "name": "About Us",
-            "slug": "extra-about-us",
-            "icon": "heart"
-          }
-        ]
-      },
-      {
-        "url": "/admin/brands",
-        "name": "Brands",
-        "slug": "brands",
-        "icon": "desktop"
-      },
-
-
-     {
-      "url": "#",
-      "name": "Banner",
-      "slug": "banner",
-      "icon": "morph-folder",
-      "submenu": [
-
-        {
-            "url": "app/banner/list",
-            "name": "List",
-            "slug": "extra-banner-create",
-            "icon": "bx bx-right-arrow-alt"
-          }
-      ]
+      "url": "/admin/brands",
+      "name": "Brands",
+      "slug": "brands",
+      "icon": "desktop"
     }
-
-
   ]
 }

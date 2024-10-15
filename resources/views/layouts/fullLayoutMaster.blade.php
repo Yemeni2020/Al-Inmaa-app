@@ -9,7 +9,7 @@
   $configData = Helper::applClasses();
 @endphp
 
-<html class="loading" lang="en" data-textdirection="ltr ">
+<html class="loading" lang="ar" data-textdirection="rtl " dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
   <!-- BEGIN: Head-->
   <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
   <!-- END: Head-->
 
   <!-- BEGIN: Body-->
-  <body class="vertical-layout 1-column navbar-sticky {{$configData['bodyCustomClass']}} footer-static blank-page
+  <body dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" class="vertical-layout 1-column navbar-sticky {{$configData['bodyCustomClass']}} footer-static blank-page
   @if($configData['theme'] === 'dark'){{'dark-layout'}} @elseif($configData['theme'] === 'semi-dark'){{'semi-dark-layout'}} @else {{'light-layout'}} @endif" data-open="click" data-menu="vertical-menu-modern" data-col="1-column" data-framework="laravel">
     <!-- BEGIN: Content-->
     <div class="app-content content">

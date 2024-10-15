@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>Edit Brand</h1>
     <form action="{{ route('admin.brands.update', $brand) }}" method="POST" enctype="multipart/form-data">
         @csrf

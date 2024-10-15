@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <section id="basic-input">
+    <section id="basic-input" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">

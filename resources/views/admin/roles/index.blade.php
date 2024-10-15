@@ -9,6 +9,7 @@
             {{ session('success') }}
         </div>
     @endif
+    <div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>{{ __('locale.Manage Roles') }}</h1>
     <a href="{{ route('admin.roles.create') }}" class="btn btn-primary">{{ __('locale.Create Role') }}</a>
     <table class="table">
@@ -36,4 +37,5 @@
             @endforeach
         </tbody>
     </table>
+    </div>
 @endsection

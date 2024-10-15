@@ -4,6 +4,7 @@
 @section('title', 'Services')
 
 @section('content')
+<div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
     <h1>{{__('locale.Manage Services')}}</h1>
     <a href="{{ route('admin.services.create') }}" class="btn btn-primary">{{__('locale.Create Service')}}</a>
     <table class="table">
@@ -27,7 +28,8 @@
                     </td>
                     <td>
                         <a href="{{ route('admin.services.edit', $service) }}" class="btn btn-sm btn-warning">Edit</a>
-                        <form action="{{ route('admin.services.destroy', $service) }}" method="POST" style="display:inline;">
+                        <form action="{{ route('admin.services.destroy', $service) }}" method="POST"
+                            style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
@@ -37,4 +39,5 @@
             @endforeach
         </tbody>
     </table>
+</div>
 @endsection

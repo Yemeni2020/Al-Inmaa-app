@@ -3,7 +3,7 @@
 @section('title', 'Create Contact Us')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container mt-5" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" align="{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-12">
                 <div class="card shadow-lg p-4 rounded-3 border-0">

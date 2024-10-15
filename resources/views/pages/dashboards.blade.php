@@ -28,7 +28,7 @@
     <!-- Dashboard Analytics Start -->
     @if (auth()->user()->userHasRole('Admin'))
 
-        <section id="dashboard-analytics">
+        <section id="dashboard-analytics" align="right">
             <!-- Website Analytics Starts -->
             <div class="col-md-12 col-sm-12">
                 <div class="card">
