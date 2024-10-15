@@ -79,7 +79,7 @@
                             <span><img class="round" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" height="40" width="40"></span><span class="avatar-status-online"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right pb-0">
-                            <a class="dropdown-item" href="{{route('admin.users.app-user-profile', Auth::user()->id)}}">
+                            <a class="dropdown-item" href="{{route('profile.show', Auth::user()->id)}}">
                                 <i class="bx bx-user mr-50"></i> {{__('locale.Edit Profile')}}
                             </a>
                             {{-- <a class="dropdown-item" href="{{ asset('app/email') }}">

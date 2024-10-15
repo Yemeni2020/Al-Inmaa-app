@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('pages.dashboards') }}">
+                    <a href="{{ route('pages.guest-home-page') }}">
                         <img class="logo h-12 w-auto" src="{{ asset('images/ico/cropped_image.png') }}" width="100%"
                             height="100%" alt="">
                     </a>

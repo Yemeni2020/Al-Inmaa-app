@@ -52,8 +52,8 @@
                                 @foreach ($users as $user)
                                     <tr>
                                         <td>{{ $user->id }}</td>
-                                        <td><a
-                                                href=" @if($user->name == Auth::user()->name){{  route('admin.users.app-user-profile', $user->id)  }}@endif">{{ $user->name }}</a>
+                                        <td>
+                                            {{ $user->name }}
                                         </td>
                                         <td>@if($user->roles->isNotEmpty())
                                             {{ $user->roles->pluck('name')->implode(', ') }}
@@ -64,7 +64,7 @@
                                         <td>{{ $user->created_at->diffForhumans() }}</td>
                                         <td>{{ $user->updated_at->diffForhumans() }}</td>
                                         <td hidden></td>
-                                        <td><a href="@if($user->id == Auth::user()->id){{route('admin.users.app-user-profile', $user->id)}} @elseif(auth()->user()->userHasRole('Admin')) {{route('admin.users.app-user-profile', $user->id)}}  @endif"
+                                        <td><a href="@if($user->id == Auth::user()->id){{route('profile.show', $user->id)}} @elseif(auth()->user()->userHasRole('Admin')) {{route('admin.users.app-user-profile', $user->id)}}  @endif"
                                                 alter="{{__("locale.Edit")}}"><i class="bx bx-edit-alt"></i></a></td>
                                         <td>
                                             {{-- <form method="post" action="{{route('user.destroy', $user->id)}}"> --}}

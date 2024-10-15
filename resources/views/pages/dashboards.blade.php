@@ -26,7 +26,7 @@
 
 @section('content')
     <!-- Dashboard Analytics Start -->
-    @if (auth()->user()->userHasRole('Admin'))
+    @if (auth()->user()->userHasRole('مدير'))
 
         <section id="dashboard-analytics" align="right">
             <!-- Website Analytics Starts -->
