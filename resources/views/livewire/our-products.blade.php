@@ -9,7 +9,8 @@
                                                         height="100%" alt="" srcset="">
                         <h3 class="text-xl font-semibold">{{ $posts->title }}</h3>
                         <p class="text-gray-600">{{ Str::limit($posts->content, '100', '.....') }}</p>
-                        <p class="mt-2 text-gray-600">${{ 500 }}</p>
+                        <!-- <p class="mt-2 text-gray-600">${{ 500 }}</p> -->
+                         <br><hr>
                         <a href="{{route('pages.post-detail', $posts->id)}}" class="text-blue-600 hover:underline">{{__('locale.Learn More')}}</a>
                     </div>
                 @endforeach

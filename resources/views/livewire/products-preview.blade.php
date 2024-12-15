@@ -10,7 +10,9 @@
                     <h3 class="text-xl font-semibold">{{ $product->title }}</h3>
                     <p class="text-gray-600">{{ Str::limit($product->content, '100', '.....') }}</p>
                     {{-- <span class="text-gray-800 font-bold">$500</span> --}}
-                    <a href="{{route('pages.post-detail', $product->id)}}" class="text-blue-600 hover:underline">{{__('locale.Learn More')}}</a>
+                    <br><hr><br>
+                    <center><a  href="{{route('pages.post-detail', $product->id)}}" class="text-blue-600 hover:underline">{{__('locale.Learn More')}}</a></center>
+                <br>
                 </div>
             @endforeach
         </div>

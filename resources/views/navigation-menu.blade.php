@@ -202,6 +202,9 @@
                 {{ __('locale.Home') }}
             </x-responsive-nav-link>
 
+            <x-responsive-nav-link href="{{ route('products') }}" :active="request()->routeIs('products')">
+                {{ __('locale.Our Products') }}
+            </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
                 {{ __('locale.Our Services') }}
             </x-responsive-nav-link>
